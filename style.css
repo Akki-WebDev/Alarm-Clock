@@ -1,0 +1,261 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*Color Variables for Styling */
+:root{
+    --primary-bg-color:#BDC3C7;
+    --secondary-bg-color:#ECF0F1;
+    --primary-text-color:#212F3C;
+    --secondary-text-color:#2E4053;
+}
+
+body.active{
+    --primary-bg-color:#2471A3;
+    --secondary-bg-color:#1A5276;
+    --primary-text-color:#ECF0F1;
+    --secondary-text-color:#BDC3C7;
+}
+
+/* Giving basic styling in Body */
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--primary-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+body h3{
+    color: var(--primary-text-color);
+}
+
+/*  Styling For the Wrapper */
+#wrapper{
+    background-color: var(--secondary-bg-color);
+    height: 95vh;
+    width: 25vw;
+    position: relative;
+    margin: 0.5em;
+    padding: 0.5em;
+    border-radius: 10px;
+    box-shadow: 4px 4px 5px 3px rgba(255, 255, 255, 0.1),
+    -4px -6px 10px 3px rgba(0, 0, 0, 0.08);
+    
+}
+
+/* Styling for the Icon and Logo of the Header*/
+.header-container{
+    width: 30%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    color: var(--primary-text-color);
+    font-weight: 900;
+    margin:auto;
+    font-size: 2.5rem;
+
+}
+
+.header-container i{
+    font-size: 3.5rem;
+    color: #16A085;
+    margin-right: 10px;
+}
+
+/* Styling for the Display Part in Header area */
+.dt_container{
+    width: 80%;
+    color: var(--secondary-text-color) ;
+    font-weight: 800;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: calc(62%/3);
+    margin: auto;
+    padding: 0.8rem;
+    position: relative;
+    border-radius: 1rem;
+    box-shadow: -4px -6px 10px 3px rgba(0, 0, 0, 0.08),
+    4px 6px 10px 3px rgba(0, 0, 0, 0.08);
+}
+.dt_container .curr_date{
+    font-family:"Orbitron";
+    font-weight: 800;
+    color:lightcoral;
+}
+
+.dt_container .time{
+    font-family:"Orbitron";
+    font-weight: 800;
+    background:linear-gradient(
+        180deg,
+        rgb(243 207 30) 0%,
+        rgb(183 172 39) 50%,
+        rgb(120 118 40) 100%
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color:transparent;
+}
+
+.dt_container i{
+    position: absolute;
+    bottom: 4%;
+    font-size: larger;
+}
+
+.dt_container p{
+    margin: 5px;
+    padding: 2px;
+}
+
+.dt_container .time{
+    color: var(--primary-text-color);
+    font-size: 2rem;
+    height: 50px;
+    width:90%;
+    text-align: center;
+    margin-top: 7px;
+    padding: 2px;
+    border-radius: 10px;
+}
+
+/* Styling for the Middle Part where Alarm Setting Options are Available */
+.set_container,.input_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+}
+.set_container .input_container{
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+}
+.input_container .column {
+    width: calc(100%/3);
+    margin: 5px;
+    box-shadow: -4px -6px 10px 3px rgba(0, 0, 0, 0.08),
+    4px 6px 10px 3px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+}
+
+.column select{
+    height: 40px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    color: var(--secondary-text-color);
+    padding: 2px;
+    font-weight: 700;
+    font-size: 0.9rem;
+
+}
+
+.column select option{
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+/* Styling for the Footer Part where alarm lists are Displaying */
+.set_container .add_alarm{
+    height: 100%;
+    width: 60%;
+    margin: 5px;
+    background-color: #5DADE2;
+    border: none;
+    padding: 5px;
+    font-size: 1rem;
+    font-weight:bolder;
+    color:var(--primary-text-color);
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+#alarm_list_container{
+    width: 100%;
+    height: 100%;
+}
+
+.alarms_list {
+    font-size: 1rem;
+    font-weight: 900;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    color: var(--secondary-text-color);
+    width: 95%;
+    border-radius: 10px;
+    box-shadow: -4px -6px 10px 3px rgba(0, 0, 0, 0.08),
+    4px 6px 10px 3px rgba(0, 0, 0, 0.08);
+    
+}
+
+.alarms_list button{
+    width: 35%;
+    height: 1.5rem;
+    font-weight: bolder;
+    background-color: #EC7063;
+    border: none;
+    border-radius:1rem;
+    color: #212F3D;
+    cursor: pointer;
+    margin-right: 12px;
+    margin-bottom: -3px;
+}
+
+.header-container,.dt_container,.set_container,body h3,.alarms_list{
+    margin-top: 10px;
+}
+
+.set_container button:hover,.alarms_list button:hover{
+    background-color: #7FB3D5 ;
+    transform: scale(1.2);
+}
+
+/* Styling for Toggle Button Sun and Moon */
+#theme_toggler{
+    position:absolute;
+    left: 45%;
+    bottom: 1%;
+    font-size: 1.5rem;
+    background-color: var(--primary-bg-color);
+    color: var(--secondary-text-color);
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.3);
+}
+
+#theme_toggler:hover{
+    background-color: #EC7063;
+    transform: scale(1.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

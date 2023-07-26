@@ -28,7 +28,7 @@ function displayTime() {
 
     // Getting Current Dates
     let date = showZero(currTime.getDate());
-    let month = showZero(currTime.getMonth());
+    let month = showZero(currTime.getMonth()+1);
     let year = currTime.getFullYear();
 
     let session = document.querySelector('.session');
